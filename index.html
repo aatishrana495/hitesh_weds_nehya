@@ -1,0 +1,3598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4efe4">
+
+<title>शुभ विवाह | Hitesh & Nehya</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&family=Noto+Serif+Devanagari:wght@400;500&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   01. THEME
+========================================================= */
+
+:root {
+    --ivory: #f7f3ea;
+    --paper: #fffdf8;
+
+    --sage: #7f8c79;
+    --sage-light: #aeb7a6;
+    --deep: #3f4b3e;
+
+    --gold: #b79b62;
+    --gold-light: #ddc997;
+    --gold-dark: #887345;
+
+    --ink: #34352f;
+    --muted: #74766e;
+
+    --ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--ivory);
+    color: var(--ink);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    overflow-x: hidden;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   03. PAPER GRAIN
+========================================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 9000;
+
+    opacity: .035;
+
+    background-image:
+        url(
+            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+        );
+}
+
+
+/* =========================================================
+   04. PARTICLES
+========================================================= */
+
+#fx {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 8000;
+}
+
+
+/* =========================================================
+   05. OPENING INVITATION
+========================================================= */
+
+.gate {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            #fffdf9,
+            #eee7d8
+        );
+
+    transition:
+        opacity 1.15s var(--ease),
+        visibility 1.15s;
+}
+
+.gate.open {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* Invitation Card */
+
+.invite {
+    position: relative;
+
+    width: min(88vw, 540px);
+
+    min-height:
+        min(82vh, 700px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        55px 28px;
+
+    border:
+        1px solid rgba(183,155,98,.55);
+
+    background:
+        rgba(255,253,248,.74);
+
+    box-shadow:
+        0 30px 90px
+        rgba(65,58,44,.12);
+
+    overflow: hidden;
+}
+
+
+/* Indian arch */
+
+.invite::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 24px;
+
+    border:
+        1px solid rgba(183,155,98,.30);
+
+    border-radius:
+        240px 240px 0 0;
+
+    pointer-events: none;
+}
+
+
+/* Decorative circles */
+
+.corner {
+    position: absolute;
+
+    width: 125px;
+    height: 125px;
+
+    border:
+        1px solid
+        rgba(127,140,121,.22);
+
+    border-radius: 50%;
+}
+
+.corner-one {
+    left: -65px;
+    top: -65px;
+}
+
+.corner-two {
+    right: -65px;
+    bottom: -65px;
+}
+
+
+/* =========================================================
+   INVITATION TYPOGRAPHY
+========================================================= */
+
+.micro {
+    font:
+        500 8px/1.5
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .38em;
+
+    text-transform: uppercase;
+
+    color: var(--gold-dark);
+}
+
+.dev {
+    font:
+        400 25px
+        "Noto Serif Devanagari",
+        serif;
+
+    color: var(--gold);
+
+    margin:
+        22px 0 12px;
+}
+
+.script {
+    font:
+        400 clamp(58px,14vw,92px)/.82
+        "Alex Brush",
+        cursive;
+
+    color: var(--deep);
+}
+
+.amp {
+    display: block;
+
+    margin: 8px;
+
+    font:
+        italic 24px
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--gold);
+}
+
+.date {
+    margin-top: 28px;
+
+    font:
+        500 10px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .28em;
+
+    color: var(--deep);
+}
+
+
+/* =========================================================
+   ENTER BUTTON
+========================================================= */
+
+.seal {
+    position: relative;
+
+    width: 86px;
+    height: 86px;
+
+    margin-top: 42px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid var(--gold);
+
+    background:
+        rgba(255,255,255,.45);
+
+    color: var(--gold-dark);
+
+    font:
+        500 8px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    animation:
+        sealPulse 2.8s infinite;
+
+    transition:
+        transform .4s var(--ease),
+        background .4s,
+        color .4s;
+}
+
+.seal:hover {
+    transform: scale(1.07);
+
+    background: var(--gold);
+
+    color: white;
+}
+
+
+@keyframes sealPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 0
+            rgba(183,155,98,.25);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 16px
+            rgba(183,155,98,0);
+    }
+}
+
+
+/* =========================================================
+   06. NAVIGATION
+========================================================= */
+
+.nav {
+    position: fixed;
+
+    z-index: 500;
+
+    top: 22px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding:
+        11px 16px;
+
+    border:
+        1px solid
+        rgba(183,155,98,.28);
+
+    background:
+        rgba(247,243,234,.76);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity .7s;
+}
+
+.nav.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.nav a {
+    font:
+        500 7px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: var(--deep);
+}
+
+.nav a:hover {
+    color: var(--gold-dark);
+}
+
+
+/* Music button */
+
+.music {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid var(--gold);
+
+    background: transparent;
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   07. HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    height: 100svh;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* Replace with actual couple photograph */
+
+.hero-bg {
+    position: absolute;
+
+    inset: -3%;
+
+    background:
+        linear-gradient(
+            rgba(30,38,30,.16),
+            rgba(30,38,30,.52)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=88"
+        )
+        center / cover;
+
+    animation:
+        heroZoom 14s ease-out forwards;
+}
+
+
+@keyframes heroZoom {
+
+    from {
+        transform:
+            scale(1.05);
+    }
+
+    to {
+        transform:
+            scale(.98);
+    }
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 20px;
+}
+
+
+.hero-small {
+    margin-bottom: 22px;
+
+    font:
+        400 8px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .35em;
+
+    text-transform: uppercase;
+}
+
+
+.hero h1 {
+    font:
+        400 clamp(74px,16vw,145px)/.82
+        "Alex Brush",
+        cursive;
+
+    text-shadow:
+        0 3px 30px
+        rgba(0,0,0,.2);
+}
+
+
+.hero-line {
+    width: 110px;
+
+    height: 1px;
+
+    margin:
+        30px auto;
+
+    background:
+        var(--gold-light);
+}
+
+
+.hero-date {
+    font:
+        500 11px
+        Cinzel,
+        serif;
+
+    letter-spacing: .25em;
+}
+
+
+.hero-location {
+    margin-top: 13px;
+
+    font:
+        400 8px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .30em;
+
+    text-transform: uppercase;
+
+    opacity: .9;
+}
+
+
+/* Scroll cue */
+
+.scroll {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 26px;
+
+    font:
+        400 7px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .30em;
+
+    text-transform: uppercase;
+}
+
+.scroll::after {
+    content: "";
+
+    display: block;
+
+    width: 1px;
+    height: 35px;
+
+    margin:
+        10px auto 0;
+
+    background:
+        rgba(255,255,255,.5);
+}
+
+
+/* =========================================================
+   08. COMMON SECTION DESIGN
+========================================================= */
+
+section {
+    position: relative;
+
+    padding:
+        110px 7vw;
+}
+
+
+.inner {
+    max-width: 1120px;
+
+    margin: auto;
+}
+
+
+.head {
+    margin-bottom: 62px;
+
+    text-align: center;
+}
+
+
+.kicker {
+    font:
+        500 8px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .38em;
+
+    text-transform: uppercase;
+
+    color: var(--gold-dark);
+}
+
+
+.title {
+    margin-top: 10px;
+
+    font:
+        500 clamp(30px,4.5vw,49px)
+        Cinzel,
+        serif;
+
+    letter-spacing: .04em;
+
+    color: var(--deep);
+}
+
+
+.subscript {
+    margin-top: -2px;
+
+    font:
+        400 42px
+        "Alex Brush",
+        cursive;
+
+    color: var(--sage);
+}
+
+
+/* Gold ornament */
+
+.ornament {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px;
+}
+
+.ornament::before,
+.ornament::after {
+    content: "";
+
+    width: 60px;
+    height: 1px;
+
+    background:
+        var(--gold);
+}
+
+.ornament span {
+    width: 6px;
+    height: 6px;
+
+    border:
+        1px solid var(--gold);
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* =========================================================
+   09. SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 1s var(--ease),
+        transform 1s var(--ease);
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   10. FAMILY BLESSINGS
+========================================================= */
+
+.blessing {
+    background:
+        var(--paper);
+}
+
+
+.family-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.family-name {
+    font:
+        500 27px
+        Cinzel,
+        serif;
+
+    color: var(--deep);
+}
+
+
+.family-role {
+    margin:
+        10px 0;
+
+    font-size: 16px;
+
+    color: var(--muted);
+}
+
+
+.family-parents {
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+
+.family-mark {
+    font-size: 25px;
+
+    color: var(--gold);
+}
+
+
+.blessing-copy {
+    max-width: 690px;
+
+    margin:
+        50px auto 0;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #62645c;
+}
+
+
+/* =========================================================
+   11. COUNTDOWN
+========================================================= */
+
+.count-section {
+    background:
+        var(--deep);
+
+    color: white;
+}
+
+
+.count-section .title {
+    color: white;
+}
+
+
+.count-section .kicker {
+    color:
+        var(--gold-light);
+}
+
+
+.countdown {
+    max-width: 760px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    border-top:
+        1px solid rgba(255,255,255,.16);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.16);
+}
+
+
+.count-unit {
+    padding:
+        30px 8px;
+
+    text-align: center;
+
+    border-right:
+        1px solid rgba(255,255,255,.12);
+}
+
+
+.count-unit:last-child {
+    border-right: 0;
+}
+
+
+.count-number {
+    font:
+        400 clamp(35px,5vw,58px)
+        Cinzel,
+        serif;
+}
+
+
+.count-label {
+    margin-top: 7px;
+
+    font:
+        400 7px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .28em;
+
+    text-transform: uppercase;
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   12. WEDDING FESTIVITIES
+========================================================= */
+
+.festivities {
+    background:
+        #f1ece2;
+}
+
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 26px;
+}
+
+
+.event-card {
+    position: relative;
+
+    padding:
+        48px 38px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        #fffaf2;
+
+    border:
+        1px solid
+        rgba(183,155,98,.34);
+
+    transition:
+        transform .55s var(--ease),
+        box-shadow .55s;
+}
+
+
+.event-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px solid
+        rgba(183,155,98,.15);
+
+    pointer-events: none;
+}
+
+
+.event-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 24px 55px
+        rgba(75,68,53,.11);
+}
+
+
+.event-dev {
+    font:
+        400 18px
+        "Noto Serif Devanagari",
+        serif;
+
+    color: var(--gold);
+}
+
+
+.event-name {
+    margin: 7px;
+
+    font:
+        500 26px
+        Cinzel,
+        serif;
+
+    color: var(--deep);
+}
+
+
+.event-poetic {
+    font:
+        italic 22px
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--sage);
+}
+
+
+.event-meta {
+    margin: 20px;
+
+    font:
+        500 8px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .20em;
+
+    text-transform: uppercase;
+}
+
+
+.event-copy {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #686a62;
+}
+
+
+.event-button {
+    display: inline-block;
+
+    margin-top: 23px;
+
+    padding: 6px;
+
+    border-bottom:
+        1px solid var(--gold);
+
+    font:
+        500 7px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+    color: #816e49;
+}
+
+
+/* =========================================================
+   13. VIVAAH CENTERPIECE
+========================================================= */
+
+.vivaah {
+    min-height: 88vh;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(41,49,40,.42),
+            rgba(41,49,40,.72)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1900&q=88"
+        )
+        center / cover fixed;
+}
+
+
+.vivaah-box {
+    max-width: 680px;
+
+    padding:
+        70px 45px;
+
+    border:
+        1px solid
+        rgba(221,201,151,.6);
+
+    background:
+        rgba(38,49,38,.28);
+
+    backdrop-filter:
+        blur(3px);
+
+    -webkit-backdrop-filter:
+        blur(3px);
+}
+
+
+.vivaah .dev {
+    color:
+        var(--gold-light);
+
+    font-size: 31px;
+}
+
+
+.vivaah h2 {
+    font:
+        500 clamp(39px,7vw,70px)
+        Cinzel,
+        serif;
+
+    letter-spacing: .08em;
+}
+
+
+.vivaah-copy {
+    max-width: 500px;
+
+    margin:
+        25px auto;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+}
+
+
+.vivaah-meta {
+    font:
+        500 8px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .25em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   14. GALLERY
+========================================================= */
+
+.gallery {
+    background:
+        #30382f;
+
+    color: white;
+}
+
+
+.gallery .title {
+    color: white;
+}
+
+
+.gallery .kicker {
+    color:
+        var(--gold-light);
+}
+
+
+.gallery-wrap {
+    max-width: 1050px;
+
+    margin: auto;
+
+    overflow: hidden;
+}
+
+
+.gallery-track {
+    display: flex;
+
+    transition:
+        transform .8s var(--ease);
+
+    touch-action: pan-y;
+}
+
+
+.gallery-slide {
+    min-width: 100%;
+}
+
+
+.gallery-slide img {
+    width: 100%;
+
+    height:
+        min(68vh,650px);
+
+    object-fit: cover;
+
+    filter:
+        saturate(.82);
+}
+
+
+.gallery-caption {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    padding:
+        15px 2px;
+
+    font-size: 18px;
+}
+
+
+.gallery-caption small {
+    font:
+        400 7px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .2em;
+
+    opacity: .6;
+}
+
+
+.gallery-controls {
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+
+.gallery-arrow {
+    width: 43px;
+    height: 43px;
+
+    margin: 5px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    background:
+        transparent;
+
+    color: white;
+
+    transition:
+        background .3s,
+        border .3s;
+}
+
+
+.gallery-arrow:hover {
+    background:
+        var(--gold);
+
+    border-color:
+        var(--gold);
+}
+
+
+/* =========================================================
+   15. RSVP
+========================================================= */
+
+.rsvp {
+    background:
+        #f2ede3;
+}
+
+
+.rsvp-box {
+    max-width: 680px;
+
+    margin: auto;
+
+    padding:
+        55px 45px;
+
+    text-align: center;
+
+    background:
+        #fffaf4;
+
+    border:
+        1px solid
+        rgba(183,155,98,.34);
+}
+
+
+.rsvp-form {
+    display: grid;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+.rsvp-form input,
+.rsvp-form select {
+    width: 100%;
+
+    padding: 16px;
+
+    border:
+        1px solid
+        rgba(139,136,111,.20);
+
+    background:
+        #fffdf9;
+
+    outline: none;
+
+    font:
+        400 11px
+        Montserrat,
+        sans-serif;
+}
+
+
+.rsvp-form input:focus,
+.rsvp-form select:focus {
+    border-color:
+        var(--gold);
+}
+
+
+.rsvp-submit {
+    padding: 17px;
+
+    border:
+        1px solid
+        var(--gold);
+
+    background:
+        var(--gold);
+
+    color: white;
+
+    font:
+        500 8px
+        Montserrat,
+        sans-serif;
+
+    letter-spacing: .27em;
+
+    text-transform: uppercase;
+
+    transition:
+        background .3s;
+}
+
+
+.rsvp-submit:hover {
+    background:
+        var(--gold-dark);
+}
+
+
+.success {
+    display: none;
+
+    padding: 30px;
+}
+
+
+.success.show {
+    display: block;
+}
+
+
+.success h3 {
+    font:
+        400 50px
+        "Alex Brush",
+        cursive;
+
+    color: var(--deep);
+}
+
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+footer {
+    padding:
+        90px 20px;
+
+    text-align: center;
+
+    background:
+        var(--paper);
+}
+
+
+.footer-names {
+    font:
+        400 64px
+        "Alex Brush",
+        cursive;
+
+    color: var(--deep);
+}
+
+
+footer .dev {
+    margin: 10px;
+}
+
+
+footer p {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   17. MOBILE
+========================================================= */
+
+@media (max-width:760px) {
+
+    section {
+        padding:
+            85px 22px;
+    }
+
+
+    .nav {
+        top: auto;
+
+        bottom: 16px;
+
+        width:
+            calc(100% - 30px);
+
+        justify-content:
+            center;
+
+        gap: 15px;
+    }
+
+
+    .nav a {
+        font-size: 6px;
+    }
+
+
+    .family-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .family-mark {
+        transform:
+            rotate(90deg);
+    }
+
+
+    .event-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .countdown {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .count-unit:nth-child(2) {
+        border-right: 0;
+    }
+
+
+    .count-unit:nth-child(-n+2) {
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.12);
+    }
+
+
+    .vivaah {
+        background-attachment:
+            scroll;
+    }
+
+
+    .vivaah-box {
+        padding:
+            55px 22px;
+    }
+
+
+    .rsvp-box {
+        padding:
+            45px 20px;
+    }
+
+
+    .gallery-slide img {
+        height: 55vh;
+    }
+
+}
+
+
+/* =========================================================
+   18. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<canvas id="fx"></canvas>
+
+
+<!-- ======================================================
+     OPENING INVITATION
+====================================================== -->
+
+<div
+    class="gate"
+    id="gate"
+>
+
+    <div class="invite">
+
+        <div class="corner corner-one"></div>
+
+        <div class="corner corner-two"></div>
+
+
+        <div class="micro">
+            With the blessings of our families
+        </div>
+
+
+        <div class="dev">
+            शुभ विवाह
+        </div>
+
+
+        <div class="script">
+
+            Hitesh
+
+            <span class="amp">
+                &amp;
+            </span>
+
+            Nehya
+
+        </div>
+
+
+        <div class="date">
+            24 · 10 · 2026
+        </div>
+
+
+        <button
+            class="seal"
+            id="enter"
+            aria-label="Open wedding invitation"
+        >
+            View<br>
+            Invitation
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
+
+<nav
+    class="nav"
+    id="nav"
+>
+
+    <a href="#families">
+        Families
+    </a>
+
+    <a href="#festivities">
+        Events
+    </a>
+
+    <a href="#memories">
+        Memories
+    </a>
+
+    <a href="#rsvp">
+        RSVP
+    </a>
+
+
+    <button
+        class="music"
+        id="musicBtn"
+        aria-label="Toggle music"
+    >
+        ♪
+    </button>
+
+</nav>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<header class="hero">
+
+    <div class="hero-bg"></div>
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-small">
+            With love · with blessings · with family
+        </div>
+
+
+        <h1>
+            Hitesh &amp; Nehya
+        </h1>
+
+
+        <div class="hero-line"></div>
+
+
+        <div class="hero-date">
+            24 OCTOBER 2026
+        </div>
+
+
+        <div class="hero-location">
+            Hyderabad · India
+        </div>
+
+
+    </div>
+
+
+    <div class="scroll">
+        Discover the celebration
+    </div>
+
+</header>
+
+
+<!-- ======================================================
+     FAMILY BLESSINGS
+====================================================== -->
+
+<section
+    class="blessing"
+    id="families"
+>
+
+<div class="inner">
+
+
+    <div class="head reveal">
+
+        <div class="kicker">
+            Together With Their Families
+        </div>
+
+
+        <h2 class="title">
+            A New Chapter Begins
+        </h2>
+
+
+        <div class="subscript">
+            With love and blessings
+        </div>
+
+
+        <div class="ornament">
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div class="family-grid reveal">
+
+
+        <!-- GROOM -->
+
+        <div>
+
+            <div class="family-name">
+                Hitesh Rana
+            </div>
+
+
+            <div class="family-role">
+                Son of
+            </div>
+
+
+            <div class="family-parents">
+
+                Mr. ______
+
+                &amp;
+
+                Mrs. ______
+
+            </div>
+
+        </div>
+
+
+        <div class="family-mark">
+            ❦
+        </div>
+
+
+        <!-- BRIDE -->
+
+        <div>
+
+            <div class="family-name">
+                Nehya Mehta
+            </div>
+
+
+            <div class="family-role">
+                Daughter of
+            </div>
+
+
+            <div class="family-parents">
+
+                Mr. ______
+
+                &amp;
+
+                Mrs. ______
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <p class="blessing-copy reveal">
+
+        With immense joy in our hearts,
+        we invite you to be part of our
+        wedding celebrations and bless us
+        as we begin this beautiful new
+        chapter together.
+
+    </p>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     COUNTDOWN
+====================================================== -->
+
+<section class="count-section">
+
+<div class="inner">
+
+
+    <div class="head reveal">
+
+
+        <div class="kicker">
+            The Celebration Draws Near
+        </div>
+
+
+        <h2 class="title">
+            Counting Down to Our Wedding
+        </h2>
+
+
+        <div
+            class="subscript"
+            style="color:var(--gold-light)"
+        >
+            शुभ विवाह
+        </div>
+
+
+    </div>
+
+
+    <div class="countdown reveal">
+
+
+        <div class="count-unit">
+
+            <div
+                class="count-number"
+                id="days"
+            >
+                00
+            </div>
+
+            <div class="count-label">
+                Days
+            </div>
+
+        </div>
+
+
+        <div class="count-unit">
+
+            <div
+                class="count-number"
+                id="hours"
+            >
+                00
+            </div>
+
+            <div class="count-label">
+                Hours
+            </div>
+
+        </div>
+
+
+        <div class="count-unit">
+
+            <div
+                class="count-number"
+                id="minutes"
+            >
+                00
+            </div>
+
+            <div class="count-label">
+                Minutes
+            </div>
+
+        </div>
+
+
+        <div class="count-unit">
+
+            <div
+                class="count-number"
+                id="seconds"
+            >
+                00
+            </div>
+
+            <div class="count-label">
+                Seconds
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     WEDDING FESTIVITIES
+====================================================== -->
+
+<section
+    class="festivities"
+    id="festivities"
+>
+
+<div class="inner">
+
+
+    <div class="head reveal">
+
+
+        <div class="kicker">
+            The Wedding Festivities
+        </div>
+
+
+        <h2 class="title">
+            Our Celebrations
+        </h2>
+
+
+        <div class="subscript">
+            A few beautiful days,
+            a lifetime of memories
+        </div>
+
+
+    </div>
+
+
+    <div class="event-grid">
+
+
+        <!-- ==========================
+             MEHENDI
+        =========================== -->
+
+        <article class="event-card reveal">
+
+
+            <div class="event-dev">
+                मेहंदी
+            </div>
+
+
+            <h3 class="event-name">
+                Mehendi
+            </h3>
+
+
+            <div class="event-poetic">
+                Colours of Celebration
+            </div>
+
+
+            <div class="event-meta">
+                23 October · 4:00 PM
+            </div>
+
+
+            <p class="event-copy">
+
+                An afternoon of henna,
+                music, laughter and
+                the people we love.
+
+            </p>
+
+
+            <a
+                class="event-button"
+                href="#"
+            >
+                View Details
+            </a>
+
+
+        </article>
+
+
+        <!-- ==========================
+             SANGEET
+        =========================== -->
+
+        <article class="event-card reveal">
+
+
+            <div class="event-dev">
+                संगीत
+            </div>
+
+
+            <h3 class="event-name">
+                Sangeet
+            </h3>
+
+
+            <div class="event-poetic">
+                An Evening of Music
+            </div>
+
+
+            <div class="event-meta">
+                23 October · 7:30 PM
+            </div>
+
+
+            <p class="event-copy">
+
+                Two families come together
+                for an evening of performances,
+                music and dancing.
+
+            </p>
+
+
+            <a
+                class="event-button"
+                href="#"
+            >
+                View Details
+            </a>
+
+
+        </article>
+
+
+        <!-- ==========================
+             HALDI
+        =========================== -->
+
+        <article class="event-card reveal">
+
+
+            <div class="event-dev">
+                हल्दी
+            </div>
+
+
+            <h3 class="event-name">
+                Haldi
+            </h3>
+
+
+            <div class="event-poetic">
+                Blessings in Yellow
+            </div>
+
+
+            <div class="event-meta">
+                24 October · 10:00 AM
+            </div>
+
+
+            <p class="event-copy">
+
+                A morning filled with
+                laughter, tradition and
+                heartfelt blessings.
+
+            </p>
+
+
+            <a
+                class="event-button"
+                href="#"
+            >
+                View Details
+            </a>
+
+
+        </article>
+
+
+        <!-- ==========================
+             RECEPTION
+        =========================== -->
+
+        <article class="event-card reveal">
+
+
+            <div class="event-dev">
+                स्वागत समारोह
+            </div>
+
+
+            <h3 class="event-name">
+                Reception
+            </h3>
+
+
+            <div class="event-poetic">
+                An Evening Together
+            </div>
+
+
+            <div class="event-meta">
+                25 October · 7:30 PM
+            </div>
+
+
+            <p class="event-copy">
+
+                Dinner, music and celebrations
+                as we gather with everyone
+                we love.
+
+            </p>
+
+
+            <a
+                class="event-button"
+                href="#"
+            >
+                View Details
+            </a>
+
+
+        </article>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     VIVAAH
+====================================================== -->
+
+<section class="vivaah">
+
+
+    <div class="vivaah-box reveal">
+
+
+        <div
+            class="micro"
+            style="color:var(--gold-light)"
+        >
+            The Heart of Our Celebration
+        </div>
+
+
+        <div class="dev">
+            विवाह
+        </div>
+
+
+        <h2>
+            VIVAAH
+        </h2>
+
+
+        <p class="vivaah-copy">
+
+            In the presence of our families
+            and those dearest to us,
+            we begin our journey together.
+
+        </p>
+
+
+        <div class="vivaah-meta">
+            24 October 2026 · 7:00 PM
+        </div>
+
+
+        <div class="ornament">
+            <span></span>
+        </div>
+
+
+        <div class="vivaah-meta">
+            Wedding Venue · Hyderabad
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- ======================================================
+     GALLERY
+====================================================== -->
+
+<section
+    class="gallery"
+    id="memories"
+>
+
+<div class="inner">
+
+
+    <div class="head reveal">
+
+
+        <div class="kicker">
+            Our Memories
+        </div>
+
+
+        <h2 class="title">
+            Moments We Treasure
+        </h2>
+
+
+        <div
+            class="subscript"
+            style="color:var(--gold-light)"
+        >
+            Our story, in photographs
+        </div>
+
+
+    </div>
+
+
+    <div class="gallery-wrap reveal">
+
+
+        <div
+            class="gallery-track"
+            id="galleryTrack"
+        >
+
+
+            <!-- SLIDE 1 -->
+
+            <div class="gallery-slide">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=88"
+                    alt="Hitesh and Nehya"
+                >
+
+
+                <div class="gallery-caption">
+
+                    <span>
+                        The Beginning
+                    </span>
+
+                    <small>
+                        01 / 03
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- SLIDE 2 -->
+
+            <div class="gallery-slide">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=88"
+                    alt="Wedding memories"
+                >
+
+
+                <div class="gallery-caption">
+
+                    <span>
+                        Together
+                    </span>
+
+                    <small>
+                        02 / 03
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- SLIDE 3 -->
+
+            <div class="gallery-slide">
+
+                <img
+                    src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=1600&q=88"
+                    alt="Celebration"
+                >
+
+
+                <div class="gallery-caption">
+
+                    <span>
+                        Forever
+                    </span>
+
+                    <small>
+                        03 / 03
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="gallery-controls">
+
+
+            <button
+                class="gallery-arrow"
+                id="previousSlide"
+                aria-label="Previous photograph"
+            >
+                ←
+            </button>
+
+
+            <button
+                class="gallery-arrow"
+                id="nextSlide"
+                aria-label="Next photograph"
+            >
+                →
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     RSVP
+====================================================== -->
+
+<section
+    class="rsvp"
+    id="rsvp"
+>
+
+<div class="inner">
+
+
+    <div class="head reveal">
+
+
+        <div class="kicker">
+            Celebrate With Us
+        </div>
+
+
+        <h2 class="title">
+            Will You Be Joining Us?
+        </h2>
+
+
+        <div class="subscript">
+            Your presence would mean
+            the world to us
+        </div>
+
+
+    </div>
+
+
+    <div class="rsvp-box reveal">
+
+
+        <form
+            class="rsvp-form"
+            id="rsvpForm"
+        >
+
+
+            <input
+                id="guestName"
+                type="text"
+                required
+                placeholder="Your full name"
+            >
+
+
+            <select
+                id="attendance"
+                required
+            >
+
+
+                <option value="">
+                    Please select your response
+                </option>
+
+
+                <option value="Joyfully attending">
+                    Joyfully attending
+                </option>
+
+
+                <option value="Regretfully unable to attend">
+                    Regretfully unable to attend
+                </option>
+
+
+            </select>
+
+
+            <select id="guestCount">
+
+
+                <option value="1 Guest">
+                    1 Guest
+                </option>
+
+
+                <option value="2 Guests">
+                    2 Guests
+                </option>
+
+
+                <option value="3 Guests">
+                    3 Guests
+                </option>
+
+
+                <option value="4 Guests">
+                    4 Guests
+                </option>
+
+
+                <option value="Family / 5+ Guests">
+                    Family / 5+ Guests
+                </option>
+
+
+            </select>
+
+
+            <input
+                id="guestNotes"
+                type="text"
+                placeholder="Dietary requirements or a message (optional)"
+            >
+
+
+            <button
+                class="rsvp-submit"
+                type="submit"
+            >
+                Confirm RSVP
+            </button>
+
+
+        </form>
+
+
+        <div
+            class="success"
+            id="success"
+        >
+
+
+            <h3>
+                Thank you
+            </h3>
+
+
+            <p>
+
+                We look forward to celebrating
+                this beautiful occasion with you.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+
+    <div class="footer-names">
+        Hitesh &amp; Nehya
+    </div>
+
+
+    <div class="dev">
+        शुभ विवाह
+    </div>
+
+
+    <p>
+
+        With love and gratitude,<br>
+
+        we look forward to
+        celebrating with you.
+
+    </p>
+
+
+    <div class="date">
+        24 · 10 · 2026
+    </div>
+
+
+</footer>
+
+
+<!-- ======================================================
+     MUSIC
+
+     Put wedding-music.mp3 in the same folder as index.html
+====================================================== -->
+
+<audio
+    id="weddingMusic"
+    loop
+    preload="none"
+>
+
+    <source
+        src="wedding-music.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<script>
+
+/* =========================================================
+   01. CONFIGURATION
+
+   EDIT THESE VALUES
+========================================================= */
+
+const CONFIG = {
+
+    groom:
+        "Hitesh Rana",
+
+    bride:
+        "Nehya Mehta",
+
+    weddingDate:
+        "2026-10-24T19:00:00+05:30",
+
+    whatsapp:
+        "919876543210"
+
+};
+
+
+/* =========================================================
+   02. ELEMENTS
+========================================================= */
+
+const gate =
+    document.getElementById(
+        "gate"
+    );
+
+
+const nav =
+    document.getElementById(
+        "nav"
+    );
+
+
+const weddingMusic =
+    document.getElementById(
+        "weddingMusic"
+    );
+
+
+const musicButton =
+    document.getElementById(
+        "musicBtn"
+    );
+
+
+/* =========================================================
+   03. OPEN INVITATION
+========================================================= */
+
+document
+    .getElementById("enter")
+    .addEventListener(
+        "click",
+        async () => {
+
+
+            /* Gold particle explosion */
+
+            createBurst(
+                window.innerWidth / 2,
+                window.innerHeight / 2,
+                75
+            );
+
+
+            /* Hide invitation */
+
+            gate.classList.add(
+                "open"
+            );
+
+
+            /* Reveal navigation */
+
+            setTimeout(
+                () => {
+
+                    nav.classList.add(
+                        "show"
+                    );
+
+                },
+                700
+            );
+
+
+            /* Attempt music playback */
+
+            try {
+
+                await weddingMusic.play();
+
+                musicButton.textContent =
+                    "♫";
+
+            }
+
+            catch (error) {
+
+                /*
+                   Browser blocked audio,
+                   or file doesn't exist.
+                */
+
+                musicButton.textContent =
+                    "♪";
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   04. MUSIC CONTROL
+========================================================= */
+
+musicButton
+    .addEventListener(
+        "click",
+        async () => {
+
+
+            if (
+                weddingMusic.paused
+            ) {
+
+                try {
+
+                    await weddingMusic.play();
+
+                    musicButton.textContent =
+                        "♫";
+
+                }
+
+                catch (error) {}
+
+            }
+
+            else {
+
+                weddingMusic.pause();
+
+                musicButton.textContent =
+                    "♪";
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   05. SCROLL REVEAL
+========================================================= */
+
+const revealObserver =
+    new IntersectionObserver(
+
+        entries => {
+
+
+            entries.forEach(
+                entry => {
+
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry
+                            .target
+                            .classList
+                            .add(
+                                "visible"
+                            );
+
+
+                        revealObserver
+                            .unobserve(
+                                entry.target
+                            );
+
+                    }
+
+
+                }
+            );
+
+
+        },
+
+        {
+            threshold: .13
+        }
+
+    );
+
+
+document
+    .querySelectorAll(
+        ".reveal"
+    )
+    .forEach(
+        element => {
+
+            revealObserver.observe(
+                element
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   06. COUNTDOWN
+========================================================= */
+
+function updateCountdown() {
+
+
+    const weddingTime =
+        new Date(
+            CONFIG.weddingDate
+        ).getTime();
+
+
+    const currentTime =
+        Date.now();
+
+
+    let remaining =
+        weddingTime -
+        currentTime;
+
+
+    if (
+        remaining < 0
+    ) {
+
+        remaining = 0;
+
+    }
+
+
+    const DAY =
+        1000 *
+        60 *
+        60 *
+        24;
+
+
+    const HOUR =
+        1000 *
+        60 *
+        60;
+
+
+    const MINUTE =
+        1000 *
+        60;
+
+
+    const days =
+        Math.floor(
+            remaining /
+            DAY
+        );
+
+
+    const hours =
+        Math.floor(
+            (
+                remaining %
+                DAY
+            ) /
+            HOUR
+        );
+
+
+    const minutes =
+        Math.floor(
+            (
+                remaining %
+                HOUR
+            ) /
+            MINUTE
+        );
+
+
+    const seconds =
+        Math.floor(
+            (
+                remaining %
+                MINUTE
+            ) /
+            1000
+        );
+
+
+    document
+        .getElementById(
+            "days"
+        )
+        .textContent =
+        String(days)
+        .padStart(
+            2,
+            "0"
+        );
+
+
+    document
+        .getElementById(
+            "hours"
+        )
+        .textContent =
+        String(hours)
+        .padStart(
+            2,
+            "0"
+        );
+
+
+    document
+        .getElementById(
+            "minutes"
+        )
+        .textContent =
+        String(minutes)
+        .padStart(
+            2,
+            "0"
+        );
+
+
+    document
+        .getElementById(
+            "seconds"
+        )
+        .textContent =
+        String(seconds)
+        .padStart(
+            2,
+            "0"
+        );
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+/* =========================================================
+   07. GALLERY
+========================================================= */
+
+const galleryTrack =
+    document.getElementById(
+        "galleryTrack"
+    );
+
+
+const gallerySlides =
+    [
+        ...document
+            .querySelectorAll(
+                ".gallery-slide"
+            )
+    ];
+
+
+let currentSlide = 0;
+
+
+function showSlide(
+    slideIndex
+) {
+
+
+    currentSlide =
+        (
+            slideIndex +
+            gallerySlides.length
+        ) %
+        gallerySlides.length;
+
+
+    galleryTrack
+        .style
+        .transform =
+
+        `translateX(-${currentSlide * 100}%)`;
+
+}
+
+
+/* Next */
+
+document
+    .getElementById(
+        "nextSlide"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            showSlide(
+                currentSlide + 1
+            );
+
+        }
+    );
+
+
+/* Previous */
+
+document
+    .getElementById(
+        "previousSlide"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            showSlide(
+                currentSlide - 1
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   08. MOBILE SWIPE
+========================================================= */
+
+let touchStartX = 0;
+
+
+galleryTrack
+    .addEventListener(
+
+        "touchstart",
+
+        event => {
+
+            touchStartX =
+                event
+                    .touches[0]
+                    .clientX;
+
+        },
+
+        {
+            passive: true
+        }
+
+    );
+
+
+galleryTrack
+    .addEventListener(
+
+        "touchend",
+
+        event => {
+
+
+            const touchEndX =
+                event
+                    .changedTouches[0]
+                    .clientX;
+
+
+            const difference =
+                touchStartX -
+                touchEndX;
+
+
+            if (
+                Math.abs(
+                    difference
+                ) < 50
+            ) {
+
+                return;
+
+            }
+
+
+            if (
+                difference > 0
+            ) {
+
+                showSlide(
+                    currentSlide + 1
+                );
+
+            }
+
+            else {
+
+                showSlide(
+                    currentSlide - 1
+                );
+
+            }
+
+
+        },
+
+        {
+            passive: true
+        }
+
+    );
+
+
+/* Auto gallery */
+
+setInterval(
+    () => {
+
+        showSlide(
+            currentSlide + 1
+        );
+
+    },
+    6000
+);
+
+
+/* =========================================================
+   09. RSVP
+========================================================= */
+
+document
+    .getElementById(
+        "rsvpForm"
+    )
+    .addEventListener(
+        "submit",
+        event => {
+
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .getElementById(
+                        "guestName"
+                    )
+                    .value
+                    .trim();
+
+
+            const attendance =
+                document
+                    .getElementById(
+                        "attendance"
+                    )
+                    .value;
+
+
+            const guests =
+                document
+                    .getElementById(
+                        "guestCount"
+                    )
+                    .value;
+
+
+            const notes =
+                document
+                    .getElementById(
+                        "guestNotes"
+                    )
+                    .value
+                    .trim()
+                    ||
+                    "None";
+
+
+            const message =
+`Wedding RSVP — Hitesh & Nehya
+
+Guest: ${name}
+Response: ${attendance}
+Guests: ${guests}
+Notes: ${notes}`;
+
+
+            const whatsappURL =
+
+                `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(message)}`;
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+
+            document
+                .getElementById(
+                    "rsvpForm"
+                )
+                .style
+                .display =
+                "none";
+
+
+            document
+                .getElementById(
+                    "success"
+                )
+                .classList
+                .add(
+                    "show"
+                );
+
+
+            createBurst(
+                window.innerWidth / 2,
+                window.innerHeight * .70,
+                55
+            );
+
+
+        }
+    );
+
+
+/* =========================================================
+   10. GOLD PARTICLE SYSTEM
+========================================================= */
+
+const canvas =
+    document.getElementById(
+        "fx"
+    );
+
+
+const context =
+    canvas.getContext(
+        "2d"
+    );
+
+
+let screenWidth;
+let screenHeight;
+let pixelRatio;
+
+
+const particles = [];
+
+
+/* Resize canvas */
+
+function resizeCanvas() {
+
+
+    pixelRatio =
+        Math.min(
+            window.devicePixelRatio ||
+            1,
+            2
+        );
+
+
+    screenWidth =
+        window.innerWidth;
+
+
+    screenHeight =
+        window.innerHeight;
+
+
+    canvas.width =
+        screenWidth *
+        pixelRatio;
+
+
+    canvas.height =
+        screenHeight *
+        pixelRatio;
+
+
+    canvas.style.width =
+        screenWidth +
+        "px";
+
+
+    canvas.style.height =
+        screenHeight +
+        "px";
+
+
+    context.setTransform(
+        pixelRatio,
+        0,
+        0,
+        pixelRatio,
+        0,
+        0
+    );
+
+}
+
+
+resizeCanvas();
+
+
+window
+    .addEventListener(
+        "resize",
+        resizeCanvas
+    );
+
+
+/* =========================================================
+   11. AMBIENT GOLD DUST
+========================================================= */
+
+const ambientParticleCount =
+
+    window.innerWidth < 700
+
+    ? 25
+
+    : 45;
+
+
+for (
+    let index = 0;
+    index < ambientParticleCount;
+    index++
+) {
+
+
+    particles.push({
+
+        x:
+            Math.random() *
+            window.innerWidth,
+
+        y:
+            Math.random() *
+            window.innerHeight,
+
+        radius:
+            Math.random() *
+            1.5 +
+            .4,
+
+        velocityX:
+            0,
+
+        velocityY:
+            -(
+                Math.random() *
+                .22 +
+                .05
+            ),
+
+        opacity:
+            Math.random() *
+            .38 +
+            .1,
+
+        life:
+            Infinity
+
+    });
+
+
+}
+
+
+/* =========================================================
+   12. PARTICLE BURST
+========================================================= */
+
+function createBurst(
+    x,
+    y,
+    count
+) {
+
+
+    for (
+        let index = 0;
+        index < count;
+        index++
+    ) {
+
+
+        const angle =
+            Math.random() *
+            Math.PI *
+            2;
+
+
+        const speed =
+            Math.random() *
+            3.8 +
+            1;
+
+
+        particles.push({
+
+            x: x,
+
+            y: y,
+
+            radius:
+                Math.random() *
+                2 +
+                1,
+
+            velocityX:
+                Math.cos(angle) *
+                speed,
+
+            velocityY:
+                Math.sin(angle) *
+                speed,
+
+            opacity:
+                .8,
+
+            life:
+                80
+
+        });
+
+
+    }
+
+
+}
+
+
+/* =========================================================
+   13. PARTICLE ANIMATION
+========================================================= */
+
+function animateParticles() {
+
+
+    context.clearRect(
+        0,
+        0,
+        screenWidth,
+        screenHeight
+    );
+
+
+    for (
+        let index =
+            particles.length - 1;
+
+        index >= 0;
+
+        index--
+    ) {
+
+
+        const particle =
+            particles[index];
+
+
+        particle.x +=
+            particle.velocityX;
+
+
+        particle.y +=
+            particle.velocityY;
+
+
+        /*
+         Burst particle
+        */
+
+        if (
+            particle.life !==
+            Infinity
+        ) {
+
+
+            particle.life--;
+
+
+            particle.velocityY +=
+                .025;
+
+
+            particle.opacity *=
+                .975;
+
+
+            if (
+                particle.life <= 0
+            ) {
+
+
+                particles.splice(
+                    index,
+                    1
+                );
+
+
+                continue;
+
+            }
+
+
+        }
+
+        /*
+         Ambient particle
+        */
+
+        else {
+
+
+            particle.x +=
+
+                Math.sin(
+                    Date.now() /
+                    1300 +
+                    index
+                ) *
+                .04;
+
+
+            if (
+                particle.y <
+                -5
+            ) {
+
+
+                particle.y =
+                    screenHeight +
+                    5;
+
+
+                particle.x =
+                    Math.random() *
+                    screenWidth;
+
+
+            }
+
+
+        }
+
+
+        context.beginPath();
+
+
+        context.arc(
+
+            particle.x,
+
+            particle.y,
+
+            particle.radius,
+
+            0,
+
+            Math.PI *
+            2
+
+        );
+
+
+        context.fillStyle =
+
+            `rgba(183,155,98,${particle.opacity})`;
+
+
+        context.fill();
+
+
+    }
+
+
+    requestAnimationFrame(
+        animateParticles
+    );
+
+
+}
+
+
+animateParticles();
+
+</script>
+
+</body>
+</html>
