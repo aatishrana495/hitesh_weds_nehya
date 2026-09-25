@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Decorative Indian wedding garden">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#9eaa91"/><stop offset=".52" stop-color="#66775f"/><stop offset="1" stop-color="#26352b"/></linearGradient>
+    <radialGradient id="sun"><stop stop-color="#f9e9b4" stop-opacity=".88"/><stop offset="1" stop-color="#f9e9b4" stop-opacity="0"/></radialGradient>
+    <pattern id="stars" width="120" height="120" patternUnits="userSpaceOnUse"><circle cx="15" cy="18" r="1" fill="#f5e8c3"/><circle cx="80" cy="65" r="1.3" fill="#f5e8c3"/><circle cx="108" cy="22" r=".7" fill="#f5e8c3"/></pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/><rect width="1600" height="1000" fill="url(#stars)" opacity=".35"/><circle cx="800" cy="370" r="330" fill="url(#sun)"/>
+  <g fill="none" stroke="#d6c18b" stroke-width="8" opacity=".72"><path d="M515 900V480c0-165 128-290 285-290s285 125 285 290v420"/><path d="M565 900V490c0-135 105-240 235-240s235 105 235 240v410"/></g>
+  <g fill="#223027"><path d="M0 740c190-100 315-52 460 85S760 920 830 1000H0z"/><path d="M1600 710c-210-80-330 0-450 125s-260 95-340 165h790z"/></g>
+  <g fill="#c6a862" opacity=".8"><circle cx="515" cy="480" r="13"/><circle cx="1085" cy="480" r="13"/><circle cx="590" cy="320" r="10"/><circle cx="1010" cy="320" r="10"/><circle cx="800" cy="190" r="12"/></g>
+  <g stroke="#e7d8ad" stroke-width="3" opacity=".65"><path d="M0 165h480"/><path d="M1120 165h480"/><path d="M180 165v42m100-42v64m100-64v42m840-42v42m100-42v64m100-64v42"/></g>
+</svg>

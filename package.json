@@ -1,0 +1,7 @@
+{
+  "name": "hitesh-weds-nehya",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "dev": "node scripts/serve.mjs", "test": "node scripts/check.mjs", "release": "node scripts/check.mjs --release" },
+  "engines": { "node": ">=20" }
+}
